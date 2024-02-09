@@ -1,4 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
+import ArtImagetile from "../ArtImageTile/ArtImageTile";
 
 function GalleryView({galleries}) {
     const { galleryId } = useParams();
@@ -11,6 +12,7 @@ function GalleryView({galleries}) {
 
         <div>
             <h2>{gallery.name}</h2>
+            {gallery.objects.map(art => <ArtImagetile key={art.id} art={art} gallery={gallery}/>)}
         </div>
     )
 }
