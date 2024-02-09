@@ -8,7 +8,7 @@ function GalleryNavigation({ galleries }) {
             <h1>Galleries</h1>
             <NavLink to='/'>Home</NavLink>
             {galleries.map(gallery => (
-                <NavLink key={gallery.id} to={`/galleries/${gallery.name}`}>
+                <NavLink key={gallery.id} to={`/galleries/${gallery.id}`}>
                     {gallery.name}
                 </NavLink>
             ))}
